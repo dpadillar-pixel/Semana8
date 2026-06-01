@@ -1,0 +1,202 @@
+// ==========================
+// VARIABLES
+// ==========================
+
+$color-principal: #4f46e5;
+$color-secundario: #ec4899;
+$color-fondo: #f8fafc;
+$color-texto: #1e293b;
+$color-blanco: #ffffff;
+
+$sombra: 0 10px 25px rgba(0, 0, 0, 0.1);
+$sombra-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+// ==========================
+// BODY
+// ==========================
+
+body {
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  color: $color-texto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+// ==========================
+// NAVBAR
+// ==========================
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    $color-principal,
+    #312e81
+  ) !important;
+
+  box-shadow: $sombra;
+
+  .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .nav-link {
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #facc15 !important;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// ==========================
+// BARRAS DE COLORES
+// ==========================
+
+.row {
+  .rounded {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.08);
+      box-shadow: $sombra;
+    }
+  }
+}
+
+// ==========================
+// COL-12 PRINCIPAL
+// ==========================
+
+.bg-primary.rounded.d-flex {
+  border-radius: 20px !important;
+  box-shadow: $sombra;
+  font-size: 2rem;
+}
+
+// ==========================
+// CARDS
+// ==========================
+
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: $sombra;
+  transition: all 0.4s ease;
+  background: $color-blanco;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $sombra-hover;
+  }
+
+  .card-body {
+    padding: 30px;
+  }
+
+  .card-title {
+    color: $color-principal;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    color: #64748b;
+  }
+}
+
+// ==========================
+// BOTONES
+// ==========================
+
+.btn {
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-primary {
+  background: $color-principal;
+  border: none;
+
+  &:hover {
+    background: darken($color-principal, 8%);
+  }
+}
+
+.btn-success {
+  border: none;
+
+  &:hover {
+    background: darken(#198754, 8%);
+  }
+}
+
+.btn-danger {
+  border: none;
+
+  &:hover {
+    background: darken(#dc3545, 8%);
+  }
+}
+
+.btn-secondary {
+  &:hover {
+    background: darken(#6c757d, 8%);
+  }
+}
+
+// ==========================
+// FORMULARIO
+// ==========================
+
+form {
+  .form-label {
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .form-control {
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    padding: 12px;
+
+    &:focus {
+      border-color: $color-principal;
+      box-shadow: 0 0 12px rgba(79, 70, 229, 0.3);
+    }
+  }
+}
+
+// ==========================
+// CARD DEL FORMULARIO
+// ==========================
+
+.card:last-child {
+  background: $color-blanco;
+}
+
+// ==========================
+// RESPONSIVE
+// ==========================
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .bg-primary.rounded.d-flex {
+    font-size: 1.3rem;
+  }
+}
